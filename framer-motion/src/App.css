@@ -1,38 +1,75 @@
+
 .App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
   text-align: center;
+  padding: 2rem 1rem;
+  background-color: #4285F4;
+  color: white;
+  margin-bottom: 2rem;
+  border-radius: 0 0 20px 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+  font-style: italic;
+  opacity: 0.8;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  margin-top: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button.active {
+  background-color: white;
+  color: #4285F4;
+}
+
+main {
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  padding-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  nav {
+    gap: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  button {
+    padding: 0.4rem 0.8rem;
   }
 }
